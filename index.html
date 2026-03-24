@@ -3,146 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lubaba Sadiya | Data Analytics Profile</title>
+    <title>Academic Portfolio | Lubaba Sadiya NP</title>
     <style>
         :root {
-            --bg: #050a18;
-            --card: #111a2e;
-            --accent: #00d2ff;
-            --text: #e2e8f0;
-            --text-dim: #94a3b8;
+            --primary-color: #2563eb;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border: #e2e8f0;
         }
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        body { font-family: 'Inter', -apple-system, sans-serif; color: var(--text-dark); background: #ffffff; line-height: 1.6; margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
         
-        /* Glassmorphism Header */
-        header { 
-            height: 400px; 
-            background: linear-gradient(135deg, #050a18 0%, #111a2e 100%);
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            border-bottom: 1px solid rgba(0, 210, 255, 0.2);
-            position: relative; overflow: hidden;
-        }
+        /* Header Section */
+        header { border-bottom: 2px solid var(--primary-color); padding-bottom: 20px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .name-title h1 { margin: 0; font-size: 2.5rem; color: var(--text-dark); text-transform: uppercase; letter-spacing: 1px; }
+        .name-title p { margin: 5px 0 0; color: var(--primary-color); font-weight: 600; font-size: 1.1rem; }
+        .contact-info { text-align: right; font-size: 0.9rem; color: var(--text-light); }
+
+        /* Main Profile Photo */
+        .profile-section { display: flex; gap: 30px; align-items: flex-start; margin-bottom: 40px; }
+        .profile-img { width: 180px; height: 180px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); background: #eee; }
+        .summary-text { flex: 1; font-style: italic; color: var(--text-light); border-left: 4px solid var(--border); padding-left: 20px; }
+
+        /* Section Styling */
+        section { margin-bottom: 35px; }
+        h2 { font-size: 1.3rem; text-transform: uppercase; color: var(--text-dark); border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 20px; }
         
-        .profile-img {
-            width: 140px; height: 140px; border-radius: 50%;
-            border: 3px solid var(--accent); object-fit: cover;
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
-            background: #1e293b; z-index: 2;
-        }
-
-        .container { max-width: 1100px; margin: -60px auto 50px; padding: 0 20px; display: grid; grid-template-columns: 1fr 2fr; gap: 30px; }
-
-        /* Sections */
-        section { 
-            background: var(--card); padding: 25px; border-radius: 16px; margin-bottom: 25px;
-            border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        h1 { margin: 15px 0 5px; font-size: 2.2rem; letter-spacing: -1px; z-index: 2; }
-        h2 { color: var(--accent); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
-        h3 { color: #fff; margin: 10px 0 5px; font-size: 1rem; }
-
-        .tag { background: rgba(0, 210, 255, 0.1); color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin: 4px; border: 1px solid rgba(0, 210, 255, 0.2); }
+        .entry { margin-bottom: 20px; }
+        .entry-header { display: flex; justify-content: space-between; font-weight: 600; color: #0f172a; }
+        .entry-sub { color: var(--primary-color); font-size: 0.95rem; font-weight: 500; }
+        .entry-details { font-size: 0.95rem; color: var(--text-light); margin-top: 5px; }
         
-        .project-card { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 20px; }
-        .date { font-size: 0.8rem; color: var(--text-dim); }
+        /* Skills List */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .skill-item { font-size: 0.95rem; display: flex; align-items: center; }
+        .skill-item::before { content: "•"; color: var(--primary-color); font-weight: bold; margin-right: 8px; }
 
-        .friends-list { display: flex; flex-wrap: wrap; gap: 10px; }
-        .friend-pill { background: #1e293b; padding: 8px 15px; border-radius: 10px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.05); }
-
-        footer { text-align: center; padding: 40px; opacity: 0.4; font-size: 0.8rem; }
-        a { color: var(--accent); text-decoration: none; }
-
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; margin-top: 20px; } }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 0.85rem; color: var(--text-light); }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="profile.jpg" alt="Lubaba Sadiya" class="profile-img">
-    <h1>LUBABA SADIYA NP</h1>
-    <p style="color: var(--accent); z-index: 2;">M.Sc. Data Analytics Student</p>
-</header>
-
 <div class="container">
-    <aside>
-        <section>
-            <h2>Contact</h2>
-            <p>📧 lubabasadiya5@gmail.com [cite: 3]</p>
-            <p>📞 9745099611 [cite: 2]</p>
-            <p>🌐 GitHub: <a href="#">Profile</a></p>
-        </section>
+    <header>
+        <div class="name-title">
+            <h1>Lubaba Sadiya NP</h1>
+            <p>M.Sc. Data Analytics Student</p>
+        </div>
+        <div class="contact-info">
+            <div>Email: lubabasadiya5@gmail.com</div>
+            <div>Phone: +91 9745099611</div>
+            <div>Location: Kerala, India</div>
+        </div>
+    </header>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="tag">Python (Pandas, NumPy)</div> [cite: 31]
-            <div class="tag">Machine Learning</div> [cite: 31]
-            <div class="tag">SQL</div> [cite: 5]
-            <div class="tag">Data Visualization</div> [cite: 31]
-            <div class="tag">Scikit-learn</div> [cite: 31]
-            <div class="tag">Docker & Kubernetes</div> [cite: 33]
-        </section>
+    <div class="profile-section">
+        <img src="profile.jpg" alt="Lubaba Sadiya" class="profile-img">
+        <div class="summary-text">
+            "Motivated M.Sc. Data Analytics student with strong skills in data analysis, machine learning, and visualization using Python and SQL. Passionate about applying data-driven techniques to solve real-world problems and continuously learning advanced analytics tools."
+        </div>
+    </div>
 
-        <section>
-            <h2>Certifications</h2>
-            <ul style="padding-left: 15px; font-size: 0.9rem; color: var(--text-dim);">
-                <li>Generative AI [cite: 33]</li>
-                <li>Git and GitHub [cite: 33]</li>
-                <li>Cloud & Containers [cite: 33]</li>
-            </ul>
-        </section>
-    </aside>
-
-    <main class="main-content">
-        <section>
-            <h2>Summary</h2>
-            <p>[cite: 5] Motivated M.Sc. Data Analytics student skilled in data analysis, machine learning, and visualization. [cite: 6] Passionate about data-driven techniques and solving real-world problems.</p>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <div class="project-card">
-                <h3>Reservoir Computing (Project)</h3>
-                <span class="date">Dec 2025 - Present [cite: 9]</span>
-                <p>[cite: 10] Exploring Echo State Networks for time-series prediction and dynamic pattern analysis.</p>
+    <section id="education">
+        <h2>Academic Background</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <span>Digital University of Kerala</span>
+                <span>2025 – 2027</span>
             </div>
-            <div class="project-card">
-                <h3>Data Science Intern</h3>
-                <span class="date">Mai Texa Technologies [cite: 12]</span>
-                <p>[cite: 14] Implementing Python programming for machine learning and data science tasks.</p>
+            <div class="entry-sub">M.Sc. Data Analytics (Specialization in Computational Science)</div>
+            <div class="entry-details">Focus on machine learning, statistical analysis, and predictive modeling.</div>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <span>Calicut University</span>
+                <span>2015 – 2019</span>
             </div>
-            <div class="project-card">
-                <h3>AJAY-Scheme Mapp</h3>
-                <span class="date">Hackathon Contributor [cite: 18]</span>
-                <p>[cite: 19] Applied data analytics and visualization to support decision-making under tight constraints.</p>
-            </div>
-        </section>
+            <div class="entry-sub">B.Sc. Statistics and Data Science</div>
+            <div class="entry-details">Foundational studies in mathematics, statistics, and programming.</div>
+        </div>
+    </section>
 
-        <section>
-            <h2>Education</h2>
-            <p><strong>M.Sc. Data Analytics [cite: 21]</strong><br>
-            Digital University Kerala | 2015-2027 [cite: 22, 24]<br>
-            <small>Specialization: Computational Science [cite: 23]</small></p>
-            
-            <p><strong>B.Sc. Statistics and Data Science [cite: 26]</strong><br>
-            Calicut University | 2015-2019 [cite: 27, 28]</p>
-        </section>
-
-        <section>
-            <h2>Creative Content & Network</h2>
-            <p>Beyond data, I explore the logic of sequential data and non-linear systems. [cite: 11]</p>
-            <div class="friends-list">
-                <div class="friend-pill">SoDS Batchmates</div>
-                <div class="friend-pill">Hackathon Team</div>
-                <div class="friend-pill">Tech Community</div>
+    <section id="experience">
+        <h2>Professional & Project Experience</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <span>Reservoir Computing Project</span>
+                <span>Dec 2025 – Present</span>
             </div>
-        </section>
-    </main>
+            <div class="entry-details">Conceptualized Echo State Networks for time-series prediction and sequential data handling.</div>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <span>Mai Texa Technologies</span>
+                <span>Data Science Intern</span>
+            </div>
+            <div class="entry-details">Implemented Python-based solutions for machine learning and data science workflows.</div>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <span>AJAY-Scheme Mapp (Hackathon)</span>
+                <span>Oct 2024</span>
+            </div>
+            <div class="entry-details">Contributed to data processing and feature analysis in a high-pressure team environment.</div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Competencies</h2>
+        <div class="skills-grid">
+            <div class="skill-item">Machine Learning & Statistical Modeling</div>
+            <div class="skill-item">Python (Pandas, NumPy, Scikit-learn)</div>
+            <div class="skill-item">Data Visualization & EDA</div>
+            <div class="skill-item">Git, GitHub & Docker</div>
+            <div class="skill-item">Kubernetes & OpenShift</div>
+            <div class="skill-item">SQL Database Management</div>
+        </div>
+    </section>
+
+    <section id="friends-network">
+        <h2>Academic Network</h2>
+        <p class="entry-details">Active member of the SoDS Batch 2025 and the AI Research Group at Digital University Kerala.</p>
+    </section>
+
+    <footer>
+        <p>This academic profile was deployed via GitHub Pages for PA 2026: Lab Exam-3.</p>
+        <p>Built using standard web technologies and <code>import antigravity</code> principles.</p>
+    </footer>
 </div>
-
-<footer>
-    <p>Powered by <code>import antigravity</code> | Submitted for PA 2026 Lab Exam-3</p>
-</footer>
 
 </body>
 </html>
