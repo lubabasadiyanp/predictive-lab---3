@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Predictive Analytics Lab</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.3);
+        }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text-main); margin: 0; line-height: 1.6; }
+        
+        /* Creative Header */
+        header { 
+            height: 40vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 2px solid var(--accent);
+            text-align: center;
+        }
+        header h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; background: linear-gradient(to right, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .container { max-width: 1000px; margin: -60px auto 50px; padding: 0 20px; }
+        
+        /* Glassmorphism Cards */
+        section { 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 20px; 
+            margin-bottom: 30px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        h2 { color: var(--accent); font-size: 1.5rem; margin-top: 0; display: flex; align-items: center; gap: 10px; }
+        
+        /* Creative Skills Progress */
+        .skill-bar { margin-bottom: 15px; }
+        .bar-bg { background: #334155; height: 8px; border-radius: 10px; overflow: hidden; margin-top: 5px; }
+        .bar-fill { background: var(--accent); height: 100%; border-radius: 10px; box-shadow: 0 0 10px var(--accent-glow); }
+
+        /* Grid for Friends & Photos */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .creative-box { 
+            background: rgba(255,255,255,0.03); 
+            border-radius: 15px; 
+            padding: 20px; 
+            border: 1px dashed #475569;
+            transition: 0.3s;
+        }
+        .creative-box:hover { border-color: var(--accent); background: rgba(56, 189, 248, 0.05); }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.6; }
+        .antigravity { font-family: monospace; color: var(--accent); text-decoration: none; border: 1px solid var(--accent); padding: 4px 8px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>DIGITAL PROFILE</h1>
+    <p>School of Data Science | Lab Exam-3 Submission</p>
+</header>
+
+<div class="container">
+    <section>
+        <h2>01. Identity</h2>
+        <p>I am an aspiring Data Scientist at <strong>Digital University Kerala</strong>. I specialize in predictive modeling and transforming complex datasets into visual intelligence.</p>
+    </section>
+
+    <section>
+        <h2>02. Technical Arsenal</h2>
+        <div class="skill-bar">
+            <span>Python & Predictive Analytics</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+        </div>
+        <div class="skill-bar">
+            <span>Machine Learning (Scikit-Learn)</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+        </div>
+        <div class="skill-bar">
+            <span>Web Dev (HTML/CSS/JS)</span>
+            <div class="bar-bg"><div class="bar-fill" style="width: 75%;"></div></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>03. Creative Gallery</h2>
+        <div class="grid">
+            <div class="creative-box">
+                <h3>Visual Photography</h3>
+                <p>Capturing the architectural beauty of the DUK campus and the natural vibes of Kerala.</p>
+            </div>
+            <div class="creative-box">
+                <h3>Data Projects</h3>
+                <p>Building Gini-index calculators and decision tree visualizers using Python.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>04. Network & Friends</h2>
+        <p>Collaborating with the brilliant minds of <strong>SoDS Batch 2025</strong>. Special thanks to my study group for the brainstorming sessions on Predictive Analytics.</p>
+    </section>
+
+    <section>
+        <h2>05. Milestones</h2>
+        <ul>
+            <li>Verified GitHub Pages Deployment</li>
+            <li>Predictive Analytics Lab Exam-3 Completed</li>
+            <li>Academic Excellence in SoDS Sem 2</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>System Status: <a href="https://xkcd.com/353/" class="antigravity">import antigravity</a> | Optimized for DUK Lab Exam</p>
+    <p>&copy; 2026 Personal Portfolio</p>
+</footer>
+
+</body>
+</html>
